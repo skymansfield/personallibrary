@@ -1,0 +1,170 @@
+
+.item1{
+  background-color:#372029;
+  grid-area: header;
+  font-size: 30px;
+  color:burlywood;
+  text-shadow: 1px 1px 1px #4176c6;
+
+}
+
+.item2{
+  background-image: url('/public/pexels-negative-space-crop.jpg');
+  background-size: cover;
+  height: 96.1%;
+  background-repeat: no-repeat;
+  grid-area: one;
+  margin-bottom: 25px;
+  padding: 15px;
+  background-color: rgb(78, 4, 4);
+  display: inline-block;
+  width: 150%;
+  border-radius: 5px;
+  color: burlywood;
+}
+
+.item3{
+  background-image: url('/public/Untitled.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  grid-area: side;
+  padding-left: 5%;
+  border-radius: 5px;
+  border-color: black;
+  border-style: solid;
+}
+
+#heading{
+  margin-top: 1%;
+  text-transform: capitalize;
+}
+  
+.container {
+  min-height: 300px;
+  width: 100%;
+  background: LightGray;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: 100px 775px;    
+  grid-template-areas:
+    "header header"
+    "one side";
+  }
+
+.com-btn{
+  background-color: #372029;
+  color: burlywood;
+  width: 70px;
+  height: 23px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 15px;
+  font-weight: bolder;
+}  
+
+
+.delbtn{
+  float: left;
+  margin-top: 3%;
+  margin-left: 1%;
+  background-color: #372029;
+   color: burlywood;
+  width: 80px;
+  height: 3vh;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 15px;
+  font-weight: bold;
+
+}
+
+.delAll-btn{
+ background-color: #372029;
+ color: burlywood;
+  margin-left: 39%;
+  margin-top: 30px;
+  width: 110px;
+  height: 4vh;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.list{
+  margin-bottom: -2%;
+  font-size: 20px;
+  font-family: monospace;
+  text-transform: capitalize;
+
+}
+
+.logout{
+  float: right;
+  text-decoration: none;
+  color:  #4176c6;
+  text-shadow: 2px 2px 2px burlywood;
+  margin-right: 5%;
+  margin-top: 2%;
+}
+
+.comment{
+  float: right;
+  margin-left: 44%; 
+  margin-top: -4%; 
+  padding-right: 10%;
+}
+
+#comments{
+  margin-left: 15%;
+  text-transform: capitalize;
+
+}
+  
+#add{
+  margin-bottom: 25px;
+  padding: 15px;
+  background-color: #372029;
+  display: inline-block;
+  width: 40%;
+  height: 28%;
+  border-radius: 7px;
+  color: burlywood;
+  margin-left: 7%;
+  margin-top: 50%;
+  border-style: solid;
+  border-color: black;
+}
+
+.center{
+  text-align: center;
+}
+  
+#addbook{
+  margin-top: 10%;
+  font-size: 35px;
+  text-shadow: 2px 2px 2px black;
+}
+  
+#titleinput{
+  margin-top: 6%;
+  height: 3vh;
+  width: 60%;
+}
+  
+#authorinput{
+  margin-top: 6%;
+  height: 3vh;
+  width: 60%;
+}
+  
+.sub-btn{
+  margin-top: 5%;
+  width: 25%;
+  height: 3vh;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 15px;
+  font-weight: bold;
+  background-color:burlywood;
+}
+  
+.sub-btn:hover{
+  background-color:#4176c6;
+}

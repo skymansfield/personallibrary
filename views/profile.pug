@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="/public/profile.css")
+    title Document
+  body
+    
+    div.container
+      
+      div.item1
+        a.logout(href='/logout') Log Out
+        h1.center#heading Welcome #{uName} to your library!
+    
+      div.item2
+        form.center#add(action='/api/books', method='post')
+          div
+            label#addbook Add a book:
+            br
+            input#titleinput(type="text", name='title', placeholder='Title' required)
+            br
+            input#authorinput(type="text", name= 'author', placeholder='Author' required)
+            input(id='user', name='username', value=`${uName}` hidden)
+            div
+            input.sub-btn(type="submit", value='Submit')
+      div.item3
+        if books
+          for val in books
+            div#books
+              p.list(href="/api/books")= `${val.title}  by:  ${val.author}  Comments:  ${val.count}`
+              form(action="/delete", method='post')   
+                input(type="text", name='id', value=`${val.id}` hidden) 
+                input(id='user', name='username', value=`${uName}` hidden)        
+                input.delbtn(type="submit", value='Delete')              
+                br
+            if val.comment
+              for stuff in val.comment
+                li#comments #{stuff}
+            form.comment(action="/api/comments", method='post')
+              input(type="text", name='id', value=`${val.id}` hidden)
+              input(id='user', name='username', value=`${uName}` hidden)
+              input(type="text", name='comments', placeholder='Add a comment' required)
+              input.com-btn(type="submit", value='Submit')
+              br
+        form(action="/deleteAll", method='post')
+          br
+          input(id='user', name='username', value=`${uName}` hidden)
+          input.delAll-btn(type="submit", value='Delete All')
+            
+            
